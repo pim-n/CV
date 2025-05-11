@@ -1,0 +1,325 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.7.2, 28 August 2024) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and simpleicons packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% WHEN COMPILING WITH XELATEX PLEASE USE
+% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex
+\iftutex 
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+
+% If your CV/résumé is in a language other than English,
+% then you probably want to change these so that when you
+% copy-paste from the PDF or run pdftotext, the location
+% and date marker icons for \cvevent will paste as correct
+% translations. For example Spanish:
+% \renewcommand{\locationname}{Ubicación}
+% \renewcommand{\datename}{Fecha}
+
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear.tex}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+\input{pubs-num.tex}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+% \usepackage{academicons}\let\faOrcid\aiOrcid
+\begin{document}
+\name{Pim Nelissen}
+\tagline{Computational Scientist with a specialisation in Physics}
+%% You can add multiple photos on the left or right
+\photoR{2.3cm}{pim}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  
+  %\email{pim.nelissen@icloud.com}
+  \email{pi0274ne-s@student.lu.se}
+  \phone{+46 760 226 691}
+  %\mailaddress{Lund,}
+  \location{Lund, Sweden}
+  %\homepage{www.homepage.com}
+  % \twitter{@twitterhandle}
+  % \xtwitter{@x-handle}
+  \linkedin{pim-nelissen}
+  \github{pim-n}
+  % \orcid{0000-0000-0000-0000}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+  %%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.57}
+\begin{paracol}{2}
+	
+\cvsection{Education}
+
+\cvevent{M.Sc.\ Computational Science, Physics}{Lund University}{Sep 2024 -- \textbf{\textit{ongoing}}}{}
+{\LaTeXraggedright
+	\cvtag{Numerical ODE/PDE solvers}
+	\cvtag{MATLAB}
+	\par}
+\divider
+
+\cvevent{B.Sc.\ Physics}{Lund University}{Sep 2020 -- Jun 2024}{}
+\begin{itemize}
+	\item My thesis involved machine learning applied to simulated MC data of radioactive decays from superheavy nuclei.
+\end{itemize}
+{\LaTeXraggedright
+	\cvtag{Python}
+	\cvtag{Monte Carlo}
+	\cvtag{Deep Learning}
+	\cvtag{C\#}
+	\cvtag{SQL}
+	\par}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+
+\medskip
+
+\cvsection{Experience}
+
+% \cvevent{Research assistant}{Lund University}{2025 -- \textbf{\textit{ongoing}}}{Lund, Sweden}
+%\divider
+
+\cvevent{Sales specialist}{Jumbo Supermarkten}{2018 -- 2020}{Oss, Netherlands}
+\begin{itemize}
+	\item Responsible for the entire product experience, with occasional leadership of a team of 3-5 people.
+\end{itemize}
+
+\cvevent{Sales Assistant}{Jumbo Supermarkten}{2015 -- 2018}{Oss, Netherlands}
+
+
+\medskip
+
+\cvsection{Volunteering}
+
+\cvevent{System Administrator}{DFRI}{Jun -- Aug 2023}{Sweden}
+\begin{itemize}
+\item I did some Linux system maintenance and projects at a non-profit dedicated to digital rights and privacy, particularly working with Docker and Nextcloud.
+\end{itemize}
+
+\divider
+
+\cvevent{Digital Literacy Instructor}{City Library Oss}{Sep 2013 --Jun 2014}{Oss, Netherlands}
+\begin{itemize}
+	\item I hosted an education program for promoting digital skills within the local community, particularly aimed at the elderly.
+\end{itemize}
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+\newpage
+
+% \divider
+% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
+% \divider
+%\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{About me}
+
+\begin{quote}
+Enjoys learning in depth and in breadth. Avid reader, and likes to spend time outdoors. Strong numerical background in physics.
+\end{quote}
+
+\medskip
+
+% \cvsection{Most Proud of}
+%\cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
+%\divider
+%\cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+%\divider
+%\cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+
+% \cvsection{Strengths}
+
+% Don't overuse these \cvtag boxes — they're just eye-candies and not essential. If something doesn't fit on a single line, it probably works better as part of an itemized list (probably inlined itemized list), or just as a comma-separated list of strengths.
+
+% The `ragged2e` document class option might cause automatic linebreaks between \cvtag to fail.
+% Either remove the ragged2e option; or 
+% add \LaTeXraggedright in the paragraph for these \cvtag
+% {\LaTeXraggedright
+% \cvtag{Curious}
+% \cvtag{Eye for detail}
+% \cvtag{Avid reader}
+% \par}
+
+% \medskip
+
+\cvsection{Workshops}
+
+% \cvevent{Computational Nuclear Science and Engineering}{IAEA Online}{Feb-May 2025}{}
+
+% \cvevent{Introduction to Bayesian Statistical Learning}{Jülich Supercomputing Centre}{Mar 2025}{}
+
+% \cvevent{Bayesian Statistical Learning}{Jülich Supercomputing Centre}{24-28 Mar 2025}{}
+\cvevent{Programming with Fortran}{Leibniz Supercomputing Centre}{11-13 Mar 2025}{}
+\cvevent{Git, code testing and documentation}{EPFL CECAM, BioNT}{4-6 Feb 2025}{}
+
+%\cvsection{Courses}
+
+%{\LaTeXraggedright
+%\cvtag{Scientific Python}
+%\cvtag{Numerical methods for ODEs}
+%\cvtag{Simulation Tools}
+%\cvtag{Deep learning}
+%\cvtag{Advanced Python}
+%\cvtag{Climate Modelling}
+%\cvtag{SQL}
+%\cvtag{C\# Programming}
+%\par}
+
+\cvsection{Technical Skill Pie}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+	% comma-separated list of value/text width/color/detail}
+
+
+\wheelchart{1.3cm}{0.3cm}{%
+	10/3em/accent/\textbf{\underline{Python}},
+	9/2em/accent/\textbf{\underline{Linux}},
+	6/4em/accent!50/{MATLAB},
+	5/2em/accent/\textbf{\underline{Git}},
+	4/5em/accent!50/{TensorFlow},
+	4/2em/accent/\textbf{\underline{SQL}},
+	3/2em/accent!30/{C\#}
+}
+
+\medskip
+
+\cvsection{Languages}
+
+\cvskill{Dutch (Native)}{5}
+\cvskill{English (IELTS Certified)}{4.5}
+\cvskill{German}{2} %% Supports X.5 values.
+\cvskill{Swedish}{1.5}
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+
+% \divider
+
+\medskip
+
+\cvsection{Publications}
+
+%% Specify your last name(s) and first name(s) as given in the .bib to automatically bold your own name in the publications list.
+%% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
+%% You can specify multiple names, especially if you have changed your name or if you need to highlight multiple authors.
+\mynames{P. Nelissen,}
+%% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
+
+\nocite{*}
+
+\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Bachelor's Thesis}},type=book]
+
+\newpage
+
+% \cvsection{Referees}
+
+% \cvref{name}{email}{mailing address}
+% \cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
+% {Address Line 1\\Address line 2}
+
+\end{paracol}
+
+
+\end{document}
