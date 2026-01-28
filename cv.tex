@@ -151,15 +151,16 @@
 
 \cvevent{M.Sc.\ Computational Science, Physics}{Lund University}{Sep 2024 -- \textbf{\textit{exp. Jun 2026}}}{Lund, Sweden}
 \begin{itemize}
-	\item My thesis consists of extending work on Bayesian computational code for localization of multiple lost radiation sources using mobile gamma spectroscopy data
-	\item Completed a large independent research project, developing an advanced statistical model for radioactivity in seaweed as a response to seawater discharge
+	\item My thesis is on developing a Python library for simulating primary gamma source localization scenarios in the context of emergency preparedness. The generated data will be used for testing a Bayesian localization algorithm.
+	\item Completed a large independent research project, developing an advanced statistical model for radioisotope concentrations in seaweed as a response to liquid seawater discharge of radioactive effluent.
 \end{itemize}
 {\LaTeXraggedright
 	\cvtag{ODE/PDEs}
 	\cvtag{Radioecology}
 	\cvtag{Reactor physics}
 	\cvtag{Dataviz}
-	\cvtag{Time series analysis}
+	\cvtag{Time series}
+	\cvtag{Bayesian statistics}
 	\cvtag{Machine learning}
 	\par}
 
@@ -173,7 +174,6 @@
 {\LaTeXraggedright
 	\cvtag{Monte Carlo}
 	\cvtag{Nuclear Physics}
-	\cvtag{Research skills}
 	\par}
 
 % Start a 2-column paracol. Both the left and right columns will automatically
@@ -183,21 +183,14 @@
 
 \cvsection{Experience}
 
-\cvevent{Teaching assistant}{Lund University}{Sep 2025 -- Dec 2025}{Lund, Sweden}
+\cvevent{Teaching Assistant}{Lund University}{Sep 2025 -- Dec 2025}{Lund, Sweden}
 \begin{itemize}
-	\item Assisting the first-year undergraduate students in mathematics and physics in the introductory scientific programming course "Computational Programming with Python".
+	\item Assisted the first-year undergraduate students in mathematics and physics in the introductory scientific programming course "Computational Programming with Python".
 \end{itemize}
 
 %{\LaTeXraggedright
 %	\cvtag{MATLAB}
 %	\par}
-
-\divider
-
-\cvevent{Sales}{Jumbo Supermarkten}{Nov 2015 -- Aug 2020}{Oss, Netherlands}
-\begin{itemize}
-	\item Promoted in 2018 to specialist, which involved leadership in small teams.
-\end{itemize}
 
 \medskip
 
@@ -214,6 +207,20 @@
 \begin{itemize}
 	\item I hosted an education program for promoting digital skills (e.g. use email, search and save information) within the local community, particularly aimed at the elderly.
 \end{itemize}
+
+\medskip
+
+\cvsection{Publications}
+
+%% Specify your last name(s) and first name(s) as given in the .bib to automatically bold your own name in the publications list.
+%% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
+%% You can specify multiple names, especially if you have changed your name or if you need to highlight multiple authors.
+\mynames{P. Nelissen,}
+%% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
+
+\nocite{*}
+
+\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Bachelor's Thesis}},type=book]
 
 % use ONLY \newpage if you want to force a page break for
 % ONLY the current column
@@ -232,16 +239,20 @@
 
 \cvevent{ENEN\# Nuclear Summer School}{Budapest University of Tech. and Econ. (BME)}{Sep 2025}{Budapest, Hungary}
 \begin{itemize}
-	\item An intensive 1-week course on reactor \\ physics at the BME training reactor. Activities included hands-on experiments and analysis of obtained data. The course was organised under the ENEN\# program.
+	\item An intensive 1-week school including hands-on experiments and analysis of obtained data. Participated on scholarship from the\\ European Nuclear Education Network.
 \end{itemize}
 
 \cvsection{Highlighted Courses}
 
-\cvachievement{\faRadiation}{Computational Reactor Physics}{Uppsala University}
+\cvachievement{\faRadiation}{Computational Reactor Physics}{\textit{Uppsala University}. Fundamental reactor engineering concepts in Python/OpenMC.}
 
-\cvachievement{\faRadiation}{Core Modeling For Core Design}{GRE@T-PIONEeR}
+\cvachievement{\faDice}{Simulation Methods of Radiation Transport}{\textit{Uppsala University}. Detector simulation in FLUKA, Serpent and Geant4.}
 
-\cvachievement{\faChartArea}{Reproducible data science and statistical learning}{Lund University}\\
+\cvachievement{\faRadiation}{Core Modeling For Core Design}{\textit{GRE@T-PIONEeR}.  Deterministic and Monte Carlo methods for LWR design.}
+
+\cvachievement{\faChartArea}{Reproducible data science and statistical learning}{\textit{Lund University}. FAIR principles, Data visualization, Bayesian statistics.}
+
+\cvachievement{\faAtom}{Modern Subatomic Physics}{\textit{Lund University.} Course on the current research frontier of high energy physics and neutron science.}
 	
 \medskip
 
@@ -287,7 +298,7 @@
 %\cvtag{C\# Programming}
 %\par}
 
-\cvsection{Technical Skills}
+\cvsection{Toolkit}
 
 % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
 % \wheelchart{outer radius}{inner radius}{
@@ -297,17 +308,20 @@
 \cvtag{Linux}
 \cvtag{R (programming)}
 \cvtag{Git}
+\cvtag{FLUKA}
+\cvtag{OpenMC}
+\cvtag{Serpent}
+\cvtag{Geant4}
+\cvtag{SQL}
 \cvtag{MATLAB}
 \cvtag{C\#}
 \cvtag{TensorFlow}
-\cvtag{PyTorch}
-\cvtag{SQL}
 
 \medskip
 
 \cvsection{Languages}
 
-\cvskill{Dutch (C2, Native)}{5}
+\cvskill{Dutch (Native)}{5}
 \cvskill{English (C1, IELTS Certified)}{4.5}
 \cvskill{German (A2)}{2} %% Supports X.5 values.
 \cvskill{Swedish (A2)}{2}
@@ -317,20 +331,6 @@
 %% \bigskip, \vspace etc to make adjustments.
 
 % \divider
-
-\medskip
-
-\cvsection{Publications}
-
-%% Specify your last name(s) and first name(s) as given in the .bib to automatically bold your own name in the publications list.
-%% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
-%% You can specify multiple names, especially if you have changed your name or if you need to highlight multiple authors.
-\mynames{P. Nelissen,}
-%% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
-
-\nocite{*}
-
-\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Bachelor's Thesis}},type=book]
 
 \newpage
 
