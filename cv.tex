@@ -96,7 +96,7 @@
 % \usepackage{academicons}\let\faOrcid\aiOrcid
 \begin{document}
 \name{Pim Nelissen}
-\tagline{Computational Physics student in Nuclear Science}
+\tagline{Nuclear Engineer}
 %% You can add multiple photos on the left or right
 
 % \photoL{2.5cm}{Yacht_High,Suitcase_High}
@@ -108,10 +108,10 @@
   % Not all of these are required!
   
   %\email{pim.nelissen@icloud.com}
-  \email{pi0274ne-s@student.lu.se}
-  \phone{+46 760 226 691}
+  \email{pimnelissen@icloud.com}
+  \phone{+32 474 97 11 99}
   %\mailaddress{Lund,}
-  \location{Lund, Sweden}
+  \location{Brussels, Belgium}
   \homepage{PimNel.com}
   % \twitter{@twitterhandle}
   % \xtwitter{@x-handle}
@@ -147,13 +147,35 @@
 \columnratio{0.57}
 \begin{paracol}{2}
 	
+\cvsection{Experience}
+
+\cvevent{Design Engineer (Core Physics \& Fuel)}{Tractebel Engineering S.A.}{Sep 2026 -- \textit{present}}{Brussels, Belgium}
+%\begin{itemize}
+%	\item 
+%\end{itemize}
+
+{\LaTeXraggedright
+	\cvtag{Neutronics}
+	\cvtag{Code-to-code benchmarking}
+	\cvtag{Gen-IV}
+	\cvtag{UQ}
+	\par}
+
+
+%{\LaTeXraggedright
+	%	\cvtag{MATLAB}
+	%	\par}
+
 \cvsection{Education}
 
-\cvevent{M.Sc.\ Computational Science, Physics}{Lund University}{Sep 2024 -- \textbf{\textit{exp. Jun 2026}}}{Lund, Sweden}
+\cvevent{M.Sc.\ Computational Science, Physics}{Lund University}{Sep 2024 -- Jun 2026}{Lund, Sweden}
+
 \begin{itemize}
-	\item My thesis is on developing a Python library for simulating primary gamma source localization scenarios in the context of emergency preparedness. The generated data will be used for testing a Bayesian localization algorithm.
-	\item Completed a large independent research project, developing an advanced statistical model for radioisotope concentrations in seaweed as a response to liquid seawater discharge of radioactive effluent.
+	\item Was a teaching assistant for the introductory scientific programming course.
+	\item Developed simulator for localization of gamma sources as part of thesis work, integrated successfully in existing research pipelines.
+	\item Completed a large independent research project on advanced time series modelling for radioisotope concentrations in seaweed as a response to liquid seawater discharge of radioactive effluent.
 \end{itemize}
+
 {\LaTeXraggedright
 	\cvtag{ODE/PDEs}
 	\cvtag{Radioecology}
@@ -168,29 +190,16 @@
 
 \cvevent{B.Sc.\ Physics}{Lund University}{Sep 2020 -- Jun 2024}{Lund, Sweden}
 
-\begin{itemize}
-	\item My thesis involved machine learning applied to Monte Carlo simulated data of radioactive decays from superheavy nuclei.
-\end{itemize}
-{\LaTeXraggedright
-	\cvtag{Monte Carlo}
-	\cvtag{Nuclear Physics}
-	\par}
+%\begin{itemize}
+%	\item My thesis involved machine learning applied to Monte Carlo simulated data of radioactive decays from superheavy nuclei.
+%\end{itemize}
+%{\LaTeXraggedright
+%	\cvtag{Monte Carlo}
+%	\cvtag{Nuclear Physics}
+%	\par}
 
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
-
-\medskip
-
-\cvsection{Experience}
-
-\cvevent{Teaching Assistant}{Lund University}{Sep 2025 -- Dec 2025}{Lund, Sweden}
-\begin{itemize}
-	\item Assisted the first-year undergraduate students in mathematics and physics in the introductory scientific programming course "Computational Programming with Python".
-\end{itemize}
-
-%{\LaTeXraggedright
-%	\cvtag{MATLAB}
-%	\par}
 
 \medskip
 
@@ -220,7 +229,7 @@
 
 \nocite{*}
 
-\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Bachelor's Thesis}},type=book]
+\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Student papers}},type=book]
 
 % use ONLY \newpage if you want to force a page break for
 % ONLY the current column
@@ -235,12 +244,13 @@
 %% page if the content is too long.
 \switchcolumn
 
-\cvsection{Summer Schools}
+\cvsection{Trainings}
 
-\cvevent{ENEN\# Nuclear Summer School}{Budapest University of Tech. and Econ. (BME)}{Sep 2025}{Budapest, Hungary}
-\begin{itemize}
-	\item An intensive 1-week school including hands-on experiments and analysis of obtained data. Participated on scholarship from the\\ European Nuclear Education Network.
-\end{itemize}
+\cvachievement{\faCubes}{Core Modeling for Core Design}{\textit{GRE@T-PIONEeR, Chalmers University}. Deterministic and Monte Carlo methods for LWR design.}
+
+\cvachievement{\faCheckCircle}{Safety of Reactor Operations}{\textit{Applied Nuclear Energy Laboratory, University of Pavia}. Participated on scholarship from the European Nuclear Education Network.}
+
+\cvachievement{\faRadiation}{ENEN\# Nuclear Summer School}{\textit{Budapest University of Tech. and Econ.} Participated on scholarship from the European Nuclear Education Network.}
 
 \cvsection{Highlighted Courses}
 
@@ -248,11 +258,7 @@
 
 \cvachievement{\faDice}{Simulation Methods of Radiation Transport}{\textit{Uppsala University}. Detector simulation in FLUKA, Serpent and Geant4.}
 
-\cvachievement{\faRadiation}{Core Modeling For Core Design}{\textit{GRE@T-PIONEeR}.  Deterministic and Monte Carlo methods for LWR design.}
-
 \cvachievement{\faChartArea}{Reproducible data science and statistical learning}{\textit{Lund University}. FAIR principles, Data visualization, Bayesian statistics.}
-
-% \cvachievement{\faAtom}{Modern Subatomic Physics}{\textit{Lund University.} Course on the current research frontier of high energy physics and neutron science.}
 	
 \medskip
 
@@ -305,17 +311,16 @@
 % \wheelchart{outer radius}{inner radius}{
 	% comma-separated list of value/text width/color/detail}
 
+\cvtag{WIMS}
+\cvtag{Serpent}
+\cvtag{Geant4}
+\cvtag{OpenMC}
 \cvtag{Python}
 \cvtag{Linux}
 \cvtag{R (programming)}
 \cvtag{Git}
-\cvtag{FLUKA}
-\cvtag{OpenMC}
-\cvtag{Serpent}
-\cvtag{Geant4}
 \cvtag{SQL}
 \cvtag{MATLAB}
-\cvtag{C\#}
 \cvtag{TensorFlow}
 
 \medskip
@@ -324,8 +329,8 @@
 
 \cvskill{Dutch (Native)}{5}
 \cvskill{English (C1, IELTS Certified)}{4.5}
-\cvskill{German (A2)}{2} %% Supports X.5 values.
 \cvskill{Swedish (A2)}{2}
+\cvskill{French (A1)}{1}
 
 %% Yeah I didn't spend too much time making all the
 %% spacing consistent... sorry. Use \smallskip, \medskip,
